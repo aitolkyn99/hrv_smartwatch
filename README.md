@@ -1,6 +1,6 @@
 # In-situ wearable device-based dataset of continuous HRV monitoring accompanied by sleep diaries
 
-- Goal 1: to preprocess the data and then to extract the HRV featuers by going through "heartpy" library
+Goal 1: to preprocess the data and then to extract the HRV featuers by going through "heartpy" library
 
 - Function:
 1) do_preprocessing(): to preprocess the PPG signals by referring Samsung HR as a ground-truth (i.e., going through aggregate_hrm_seconds()) => discard any PPG signals if any abnormal values from the corresponding ground-truth are obsered at lease one time per second (c.f., in general, there will be 10 PPG signals in a second, meaning 10 hz)
@@ -18,8 +18,7 @@
 
 
 
-
-- Goal 2: to postprocess of the derived HRV features, and to extract reported labels independent to the heart signals
+Goal 2: to postprocess of the derived HRV features, and to extract reported labels independent to the heart signals
   
 - Function:
 1) discard_slices_by_missingness(): to discard any slices if their "missingness_samsung_bpm" values are greater than the hyperparameter "missingess_score"
