@@ -70,14 +70,13 @@ def do_preprocessing(df_ppg_raw, df_hrm_raw):
 
 
 
-
 def ppg_preProcessing_chunk(df_daily, win_size):
     i = 0; j = 0; chunk_ = []
     while i >= 0:
         try:
             chunk_.append(j)
 
-            # in case gap exists, and it is greater than 'win_size'
+            # in case a gap exists, and it is greater than 'win_size'
             if int(df_daily['ts'][i]) < int(df_daily['ts'][i+1]) - win_size:
                 j += 1
 
